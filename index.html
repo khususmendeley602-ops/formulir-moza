@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Komunitas Teknologi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fb;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      width: 480px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    div {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: inline-block;
+      width: 150px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 6px;
+      width: 250px;
+    }
+
+    table {
+      width: 80%;
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e0e0;
+    }
+
+    fieldset {
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    input[type="reset"] {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulir Pendaftaran Komunitas Teknologi</h1>
+
+  <form action="submit.html" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Data Diri</legend>
+
+      <div>
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" value="Anindha Moza Fresshati" placeholder="Masukkan nama lengkap" required>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="fresshatianindhamoza@gmail.com" required autocomplete="email">
+      </div>
+
+      <div>
+        <label for="password">Kata Sandi:</label>
+        <input type="password" id="password" name="password" value="3333333" minlength="6" required>
+      </div>
+
+      <div>
+        <label for="usia">Usia:</label>
+        <input type="number" id="usia" name="usia" value="18" min="1" max="100" required>
+      </div>
+
+      <div>
+        <label for="tgl">Tanggal Lahir:</label>
+        <input type="date" id="tgl" name="tgl" value="2007-04-11" required>
+      </div>
+
+      <div>
+        <label>Jenis Kelamin:</label>
+        <span><input type="radio" name="gender" value="Perempuan" checked> Perempuan</span>
+        <span><input type="radio" name="gender" value="Laki-laki"> Laki-laki</span>
+      </div>
+
+      <div>
+        <label>Minat:</label>
+        <input type="checkbox" name="minat" value="AI" checked> AI
+        <input type="checkbox" name="minat" value="Web"> Web
+        <input type="checkbox" name="minat" value="IoT"> IoT
+        <input type="checkbox" name="minat" value="Game"> Game
+      </div>
+
+      <div>
+        <label for="telp">Nomor Telepon:</label>
+        <input type="tel" id="telp" name="telp" value="+62 813-4080-4414" pattern="[+0-9\s-]{10,15}" required>
+      </div>
+
+      <div>
+        <label for="link">Link Portofolio:</label>
+        <input type="url" id="link" name="link" placeholder="https://contoh.com" autocomplete="off">
+      </div>
+
+      <div>
+        <label for="foto">Upload Foto Profil:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+      </div>
+
+    </fieldset>
+
+    <div class="buttons">
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+  <h2 style="text-align:center;">Data Mahasiswa & Pengampu Praktikum</h2>
+
+  <table>
+    <tr>
+      <th>Nama</th>
+      <th>NPM</th>
+      <th>Program Studi</th>
+      <th>Keterangan</th>
+    </tr>
+    <tr>
+      <td>Anindha Moza Fresshati</td>
+      <td>A1B025015</td>
+      <td>Pendidikan Bahasa Inggris</td>
+      <td>Mahasiswa Praktikan</td>
+    </tr>
+    <tr>
+      <td>Reksi Hendra Pratama</td>
+      <td>G1A022032</td>
+      <td>Teknik Informatika</td>
+      <td>Pengampu Praktikum</td>
+    </tr>
+  </table>
+
+</body>
+</html>
